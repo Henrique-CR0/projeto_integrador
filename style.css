@@ -1,0 +1,387 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 60px; /* Adiciona padding no topo igual à altura da navbar */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0d1b2a; /* Cor de fundo escura */
+    color: white;
+    padding: 10px 0;
+    position: fixed; /* Fixa a barra no topo */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #cd3ce7c4; /* Cor de destaque ao passar o mouse */
+}
+
+
+/* Hero Section */
+.hero {
+    background-image: url('placeholder-hero.jpg'); /* Substitua pela sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Ajuste a altura conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    /* A altura total do hero pode precisar de ajuste dependendo da altura da navbar */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 0; /* Remove margem superior para não empurrar o conteúdo */
+}
+
+/* History Section */
+.history-section {
+    background-color: #0d1b2a; /* Azul escuro da imagem */
+    color: white;
+    padding: 40px 0;
+}
+
+.history-section .container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+}
+
+.history-nav {
+    flex: 1;
+    min-width: 200px; /* Largura mínima */
+}
+
+.history-nav h2 {
+    font-size: 2.5em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.history-content {
+    flex: 2;
+    min-width: 300px; /* Largura mínima */
+}
+
+.history-content p {
+    margin-bottom: 20px;
+}
+
+/* MVV Section */
+.mvv-section {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.mvv-section .container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+}
+
+.mvv-item {
+    flex: 1;
+    min-width: 250px; /* Largura mínima antes de quebrar */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.mvv-item h3 {
+    color: #0d1b2a;
+    margin-top: 0;
+}
+
+.mvv-item.values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mvv-item.values li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.mvv-item.values li::before {
+    content: '\2022'; /* Marcador de lista */
+    color: #e74c3c; /* Cor de exemplo para o marcador */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+
+/* Team Section */
+.team-section {
+    padding: 40px 0;
+}
+
+.team-section h2 {
+    text-align: center;
+    color: #0d1b2a;
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo */
+    gap: 20px;
+}
+
+.team-member {
+    border-radius: 8px; /* Ajuste o valor conforme a imagem */
+    /* Remova ou modifique as propriedades flex-direction e align-items se quiser que fiquem lado a lado */
+    /* Se a foto for retangular/quadrada, remova border-radius: 50% da regra img */
+}
+
+.team-member img {
+    width: 100px; /* Largura estimada */
+    height: 100px; /* Altura estimada (mantenha igual se for quadrada) */
+    /* remova border-radius: 50%; para fotos retangulares/quadradas */
+    object-fit: cover;
+    margin-right: 15px; /* Espaço entre a foto e o texto */
+    border-radius: 5px; /* O mesmo border-radius do cartão */
+}
+
+.member-info {
+    /* Adicione espaçamento à esquerda se a foto for float ou absolute */
+}
+
+.member-info h4 { /* Nome do Membro */
+    font-size: 18px; /* Tamanho estimado */
+    font-weight: bold; /* Peso estimado */
+    color: #333; /* Cor escura */
+    margin-top: 0;
+    margin-bottom: 5px; /* Espaço abaixo do nome */
+}
+
+.member-info p:nth-of-type(1) { /* Cargo/Título */
+    font-size: 14px; /* Tamanho estimado */
+    font-weight: normal;
+    color: #555; /* Cor um pouco mais clara */
+    margin-top: 0;
+    margin-bottom: 5px; /* Espaço abaixo do cargo */
+}
+
+.member-info p:nth-of-type(2) { /* Informação de Estudante */
+    font-size: 13px; /* Tamanho estimado */
+    font-weight: normal;
+    color: #777; /* Cor mais clara */
+    margin-top: 0;
+    margin-bottom: 5px; /* Espaço abaixo da info estudante */
+}
+
+/* Regra para o email (pode precisar de uma classe específica no HTML se não for o último p) */
+.member-info p:last-child { /* Assumindo que o email é o último parágrafo */
+     font-size: 13px; /* Tamanho estimado */
+     font-weight: normal;
+     color: #777; /* Cor mais clara */
+     text-decoration: none; /* Remove sublinhado se for link */
+     word-break: break-all; /* Ajuda com emails longos em espaços pequenos */
+}
+
+/* Project Section */
+.project-section {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.project-section .container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+}
+
+.project-details {
+    flex: 2;
+    min-width: 300px; /* Largura mínima antes de quebrar */
+}
+
+.project-details h2 {
+    color: #0d1b2a;
+    margin-top: 0;
+}
+
+.project-details button {
+    background-color: #e74c3c; /* Cor de exemplo para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.project-details button:hover {
+    background-color: #c0392b;
+}
+
+.project-image-card {
+    flex: 1;
+    min-width: 250px; /* Largura mínima antes de quebrar */
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem fique dentro do border-radius */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: fit-content; /* Ajusta a altura baseada no conteúdo */
+}
+
+.card-header {
+    background-color: #e74c3c; /* Cor de exemplo para o cabeçalho do cartão */
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .navbar .container {
+        flex-direction: column; /* Empilha logo e links */
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        justify-content: center; /* Centraliza links */
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Ajusta espaçamento entre links */
+    }
+
+
+    .history-section .container,
+    .mvv-section .container,
+    .project-section .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .history-nav h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* Empilha membros da equipe */
+    }
+
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-member img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    body {
+        padding-top: 100px; /* Ajusta padding superior para a navbar empilhada */
+    }
+}
+
+@media (max-width: 480px) {
+     .nav-links {
+        flex-direction: column; /* Empilha links em telas muito pequenas */
+     }
+     .nav-links li {
+        margin: 5px 0;
+     }
+     body {
+        padding-top: 140px; /* Ajusta padding superior para a navbar totalmente empilhada */
+    }
+}
