@@ -4,7 +4,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    padding-top: 60px; /* Adiciona padding no topo igual à altura da navbar */
+    padding-top: 60px;
 }
 
 .container {
@@ -13,16 +13,15 @@ body {
     max-width: 1200px;
 }
 
-/* Navbar */
 .navbar {
-    background-color: #0d1b2a; /* Cor de fundo escura */
+    background-color: #0d1b2a;
     color: white;
     padding: 10px 0;
-    position: fixed; /* Fixa a barra no topo */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
+    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -58,46 +57,43 @@ body {
 }
 
 .nav-links a:hover {
-    color: #cd3ce7c4; /* Cor de destaque ao passar o mouse */
+    color: #cd3ce7c4;
 }
 
-
-/* Hero Section */
 .hero {
-    background-image: url('placeholder-hero.jpg'); /* Substitua pela sua imagem de fundo */
+    background-image: url('/img_index_1/foto_da_equipe.png');
     background-size: cover;
     background-position: center;
-    height: 400px; /* Ajuste a altura conforme necessário */
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    /* A altura total do hero pode precisar de ajuste dependendo da altura da navbar */
 }
 
 .hero-content h1 {
     font-size: 3em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    margin-top: 0; /* Remove margem superior para não empurrar o conteúdo */
+    margin-top: 0;
 }
 
-/* History Section */
 .history-section {
-    background-color: #0d1b2a; /* Azul escuro da imagem */
+    background-color: #0d1b2a;
     color: white;
-    padding: 40px 0;
 }
 
 .history-section .container {
     display: flex;
+    flex-direction: row;
     gap: 40px;
-    flex-wrap: wrap; /* Permite quebra em telas menores */
+    flex-wrap: wrap;
 }
 
 .history-nav {
     flex: 1;
-    min-width: 200px; /* Largura mínima */
+    min-width: 200px;
+    margin-top: 40px;
 }
 
 .history-nav h2 {
@@ -108,14 +104,15 @@ body {
 
 .history-content {
     flex: 2;
-    min-width: 300px; /* Largura mínima */
+    background-color: white;
+    color: black;
+    padding: 20px;
 }
 
 .history-content p {
     margin-bottom: 20px;
 }
 
-/* MVV Section */
 .mvv-section {
     padding: 40px 0;
     background-color: #f4f4f4;
@@ -124,12 +121,12 @@ body {
 .mvv-section .container {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap; /* Permite quebra em telas menores */
+    flex-wrap: wrap;
 }
 
 .mvv-item {
     flex: 1;
-    min-width: 250px; /* Largura mínima antes de quebrar */
+    min-width: 250px;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -153,8 +150,8 @@ body {
 }
 
 .mvv-item.values li::before {
-    content: '\2022'; /* Marcador de lista */
-    color: #e74c3c; /* Cor de exemplo para o marcador */
+    content: '\2022';
+    color: #e74c3c;
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -163,8 +160,6 @@ body {
     left: 0;
 }
 
-
-/* Team Section */
 .team-section {
     padding: 40px 0;
 }
@@ -176,64 +171,68 @@ body {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 30px 0;
     gap: 20px;
 }
 
 .team-member {
-    border-radius: 8px; /* Ajuste o valor conforme a imagem */
-    /* Remova ou modifique as propriedades flex-direction e align-items se quiser que fiquem lado a lado */
-    /* Se a foto for retangular/quadrada, remova border-radius: 50% da regra img */
+    background-color: #F1F1F1CC;
+    display: flex;
+    height: 200px;
+    width: 400px;
+    flex-direction: row;
+    align-items: start;
 }
 
 .team-member img {
-    width: 100px; /* Largura estimada */
-    height: 100px; /* Altura estimada (mantenha igual se for quadrada) */
-    /* remova border-radius: 50%; para fotos retangulares/quadradas */
-    object-fit: cover;
-    margin-right: 15px; /* Espaço entre a foto e o texto */
-    border-radius: 5px; /* O mesmo border-radius do cartão */
+    max-width: 200px !important;
+    max-height: 200px !important;
+    object-fit: cover !important;
+    margin-right: 15px;
+    border-radius: 5px;
 }
 
 .member-info {
-    /* Adicione espaçamento à esquerda se a foto for float ou absolute */
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
-.member-info h4 { /* Nome do Membro */
-    font-size: 18px; /* Tamanho estimado */
-    font-weight: bold; /* Peso estimado */
-    color: #333; /* Cor escura */
+.member-info h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
     margin-top: 0;
-    margin-bottom: 5px; /* Espaço abaixo do nome */
+    margin-bottom: 5px;
 }
 
-.member-info p:nth-of-type(1) { /* Cargo/Título */
-    font-size: 14px; /* Tamanho estimado */
+.member-info p:nth-of-type(1) {
+    font-size: 14px;
     font-weight: normal;
-    color: #555; /* Cor um pouco mais clara */
+    color: #555;
     margin-top: 0;
-    margin-bottom: 5px; /* Espaço abaixo do cargo */
+    margin-bottom: 5px;
 }
 
-.member-info p:nth-of-type(2) { /* Informação de Estudante */
-    font-size: 13px; /* Tamanho estimado */
+.member-info p:nth-of-type(2) {
+    font-size: 13px;
     font-weight: normal;
-    color: #777; /* Cor mais clara */
+    color: #777;
     margin-top: 0;
-    margin-bottom: 5px; /* Espaço abaixo da info estudante */
+    margin-bottom: 5px;
 }
 
-/* Regra para o email (pode precisar de uma classe específica no HTML se não for o último p) */
-.member-info p:last-child { /* Assumindo que o email é o último parágrafo */
-     font-size: 13px; /* Tamanho estimado */
+.member-info p:last-child {
+     font-size: 13px;
      font-weight: normal;
-     color: #777; /* Cor mais clara */
-     text-decoration: none; /* Remove sublinhado se for link */
-     word-break: break-all; /* Ajuda com emails longos em espaços pequenos */
+     color: #777;
+     text-decoration: none;
+     word-break: break-all;
 }
 
-/* Project Section */
 .project-section {
     padding: 40px 0;
     background-color: #f4f4f4;
@@ -242,12 +241,12 @@ body {
 .project-section .container {
     display: flex;
     gap: 40px;
-    flex-wrap: wrap; /* Permite quebra em telas menores */
+    flex-wrap: wrap;
 }
 
 .project-details {
     flex: 2;
-    min-width: 300px; /* Largura mínima antes de quebrar */
+    min-width: 300px;
 }
 
 .project-details h2 {
@@ -256,7 +255,7 @@ body {
 }
 
 .project-details button {
-    background-color: #e74c3c; /* Cor de exemplo para o botão */
+    background-color: #e74c3c;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -273,16 +272,16 @@ body {
 
 .project-image-card {
     flex: 1;
-    min-width: 250px; /* Largura mínima antes de quebrar */
+    min-width: 250px;
     background-color: white;
     border-radius: 8px;
-    overflow: hidden; /* Garante que a imagem fique dentro do border-radius */
+    overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    height: fit-content; /* Ajusta a altura baseada no conteúdo */
+    height: fit-content;
 }
 
 .card-header {
-    background-color: #e74c3c; /* Cor de exemplo para o cabeçalho do cartão */
+    background-color: #e74c3c;
     color: white;
     padding: 10px 15px;
     font-weight: bold;
@@ -295,11 +294,10 @@ body {
 .card-content img {
     width: 100%;
     height: auto;
-    display: block; /* Remove espaço extra abaixo da imagem */
+    display: block;
     margin-bottom: 10px;
 }
 
-/* Footer */
 footer {
     background-color: #0d1b2a;
     color: white;
@@ -322,26 +320,24 @@ footer a:hover {
     margin-top: 10px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .container {
         width: 95%;
     }
 
     .navbar .container {
-        flex-direction: column; /* Empilha logo e links */
+        flex-direction: column;
         text-align: center;
     }
 
     .nav-links {
         margin-top: 10px;
-        justify-content: center; /* Centraliza links */
+        justify-content: center;
     }
 
     .nav-links li {
-        margin: 0 10px; /* Ajusta espaçamento entre links */
+        margin: 0 10px;
     }
-
 
     .history-section .container,
     .mvv-section .container,
@@ -356,7 +352,7 @@ footer a:hover {
     }
 
     .team-grid {
-        grid-template-columns: 1fr; /* Empilha membros da equipe */
+        grid-template-columns: 1fr;
     }
 
     .team-member {
@@ -370,18 +366,18 @@ footer a:hover {
     }
 
     body {
-        padding-top: 100px; /* Ajusta padding superior para a navbar empilhada */
+        padding-top: 100px;
     }
 }
 
 @media (max-width: 480px) {
      .nav-links {
-        flex-direction: column; /* Empilha links em telas muito pequenas */
+        flex-direction: column;
      }
      .nav-links li {
         margin: 5px 0;
      }
      body {
-        padding-top: 140px; /* Ajusta padding superior para a navbar totalmente empilhada */
+        padding-top: 140px;
     }
 }
